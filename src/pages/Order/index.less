@@ -1,0 +1,62 @@
+.header {
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 6px 16px -8px,
+    rgba(0, 0, 0, 0.05) 0px 9px 28px 0px, rgba(0, 0, 0, 0.03) 0px 12px 48px 16px;
+}
+
+.orderCard {
+  margin: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 6px 16px -8px,
+    rgba(0, 0, 0, 0.05) 0px 9px 28px 0px, rgba(0, 0, 0, 0.03) 0px 12px 48px 16px;
+  font-size: 14px;
+}
+
+.orderCard li {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.orderCard ul {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.orderCard li::before {
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #fff;
+}
+
+.from::before {
+  content: '起';
+  background-color: rgba(57, 137, 237);
+}
+
+.to::before {
+  content: '终';
+  background-color: rgba(233, 84, 83);
+}
+
+.orderCard .content {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.orderCard .footer {
+  text-align: right;
+}
+
+.button {
+  font-size: 0.75rem;
+  margin-left: 0.5rem;
+}
+
+:global(.adm-radio) {
+  --icon-size: 1.25rem;
+  --font-size: 1rem;
+}
