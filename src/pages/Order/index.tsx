@@ -7,6 +7,7 @@ import { getAllOrders } from '@/services/order';
 import dayjs from 'dayjs';
 
 import styles from './index.less';
+import MainLayout from '@/layouts/MainLayout';
 
 const OrderPage: React.FC = () => {
   const [orderList, setOrderList] = useState<Order[]>();
@@ -103,14 +104,9 @@ const OrderPage: React.FC = () => {
       : null;
 
   return (
-    <>
-      <div className={styles.header}>
-        <NavBar back="" backArrow={null} right={navRight}>
-          温肯拼车
-        </NavBar>
-      </div>
+    <MainLayout title="温肯拼车" navRight={navRight}>
       {cardsRender(orderList)}
-    </>
+    </MainLayout>
   );
 };
 

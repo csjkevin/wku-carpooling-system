@@ -13,6 +13,7 @@ import dayjs from 'dayjs';
 import { history } from 'umi';
 import { createOrder } from '@/services/order';
 import { OrderForm } from '@/interfaces';
+import MainLayout from '@/layouts/MainLayout';
 
 const NewOrderPage: React.FC = () => {
   const [pickerVisible, setPickerVisible] = useState(false);
@@ -32,14 +33,7 @@ const NewOrderPage: React.FC = () => {
   };
 
   return (
-    <>
-      <NavBar
-        onBack={() => {
-          history.goBack();
-        }}
-      >
-        创建订单
-      </NavBar>
+    <MainLayout title="创建订单">
       <Form
         name="form"
         layout="horizontal"
@@ -108,7 +102,7 @@ const NewOrderPage: React.FC = () => {
           />
         </Form.Item>
       </Form>
-    </>
+    </MainLayout>
   );
 };
 
