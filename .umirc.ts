@@ -13,6 +13,18 @@ export default defineConfig({
         { path: '/order/new', component: '@/pages/Order/New' },
       ],
     },
+    {
+      path: '/register',
+      component: '@/pages/Register',
+    },
+    {
+      path: '/login',
+      component: '@/pages/Login',
+    },
+    {
+      path: '/verify',
+      component: '@/pages/Verify',
+    },
   ],
   fastRefresh: {},
   proxy: {
