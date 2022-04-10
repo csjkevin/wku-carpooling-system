@@ -5,6 +5,8 @@ import { Button, Form, Input, Toast } from 'antd-mobile/es';
 import { history } from 'umi';
 
 const LoginPage: React.FC = () => {
+  const from = history.location.query?.from;
+
   const handleFormSubmit = (e: LoginForm) => {
     login({ data: e }).then((res) => {
       if (res.success) {
@@ -13,7 +15,7 @@ const LoginPage: React.FC = () => {
           content: '登录成功',
         });
         setTimeout(() => {
-          history.goBack();
+          history.replace(Array.isArray(from) ? from[0] : from || '/');
         }, 2000);
       }
     });

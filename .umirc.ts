@@ -8,6 +8,7 @@ export default defineConfig({
     { path: '/', component: '@/pages/index' },
     {
       path: '/order',
+      component: '@/layouts/AuthLayout',
       routes: [
         { path: '/order', component: '@/pages/Order' },
         { path: '/order/new', component: '@/pages/Order/New' },
